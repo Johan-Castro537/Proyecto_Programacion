@@ -1,12 +1,12 @@
 package util;
  
-import ProyectoFinal.excepciones.ExcepcionesSistema.ArchivoInvalidoException;
-import ProyectoFinal.excepciones.ExcepcionesSistema.ColaDeEsperaVaciaException;
-import ProyectoFinal.excepciones.ExcepcionesSistema.CupoLlenoException;
-import ProyectoFinal.excepciones.ExcepcionesSistema.EstudianteNoEncontradoException;
-import ProyectoFinal.excepciones.ExcepcionesSistema.HorarioConflictivoException;
-import ProyectoFinal.excepciones.ExcepcionesSistema.PilaDeshacerVaciaException;
-import ProyectoFinal.excepciones.ExcepcionesSistema.PreRequisitoNoAprobadoException;
+import excepciones.ExcepcionesDelSistema.ArchivoInvalidoException;
+import excepciones.ExcepcionesDelSistema.ColaDeEsperaVaciaException;
+import excepciones.ExcepcionesDelSistema.CupoLlenoException;
+import excepciones.ExcepcionesDelSistema.EstudianteNoEncontradoException;
+import excepciones.ExcepcionesDelSistema.HorarioConflictivoException;
+import excepciones.ExcepcionesDelSistema.PilaDeshacerVaciaException;
+import excepciones.ExcepcionesDelSistema.PreRequisitoNoAprobadoException;
 import java.io.IOException;
 import java.util.Scanner;
  
