@@ -1,10 +1,21 @@
 package util;
-
+ 
+import ProyectoFinal.excepciones.ExcepcionesSistema.ArchivoInvalidoException;
+import ProyectoFinal.excepciones.ExcepcionesSistema.ColaDeEsperaVaciaException;
+import ProyectoFinal.excepciones.ExcepcionesSistema.CupoLlenoException;
+import ProyectoFinal.excepciones.ExcepcionesSistema.EstudianteNoEncontradoException;
+import ProyectoFinal.excepciones.ExcepcionesSistema.HorarioConflictivoException;
+import ProyectoFinal.excepciones.ExcepcionesSistema.PilaDeshacerVaciaException;
+import ProyectoFinal.excepciones.ExcepcionesSistema.PreRequisitoNoAprobadoException;
 import java.io.IOException;
 import java.util.Scanner;
+ 
 public class Main {
-      public static void main(String[] args)
-            throws IOException
+ 
+    public static void main(String[] args)
+            throws EstudianteNoEncontradoException, PreRequisitoNoAprobadoException,
+            CupoLlenoException, ColaDeEsperaVaciaException, HorarioConflictivoException,
+            PilaDeshacerVaciaException, ArchivoInvalidoException, IOException    
         {
  
         Scanner sc = new Scanner(System.in);
@@ -49,11 +60,78 @@ public class Main {
             opcion = Integer.parseInt(sc.nextLine().trim());
  
             switch (opcion) {
-               
+                case 1:
+                    gestor.registrarEstudiante();
+                    break;
+                case 2:
+                    gestor.buscarEstudiantePorId();
+                    break;
+                case 3:
+                    gestor.listarEstudiantes();
+                    break;
+                case 4:
+                    gestor.eliminarEstudiante();
+                    break;
                 case 5:
                     gestor.crearMateria();
                     break;
+                case 6:
+                    gestor.agregarPreRequisito();
+                    break;
+                case 7:
+                    gestor.mostrarPreRequisitos();
+                    break;
+                case 8:
+                    gestor.inscribirEstudiante();
+                    break;
+                case 9:
+                    gestor.cancelarInscripcion();
+                    break;
+                case 10:
+                    gestor.mostrarColaEspera();
+                    break;
+                case 11:
+                    gestor.reservarHorario();
+                    break;
+                case 12:
+                    gestor.liberarHorario();
+                    break;
+                case 13:
+                    gestor.consultarDisponibilidad();
+                    break;
+                case 14:
+                    gestor.agregarConexionEdificios();
+                    break;
+                case 15:
+                    gestor.calcularRutaMasCorta();
+                    break;
+                case 16:
+                    gestor.registrarNota();
+                    break;
+                case 17:
+                    gestor.verReporteAcademico();
+                    break;
+                case 18:
+                    gestor.navegadorReportes();
+                    break;
+                case 19:
+                    gestor.deshacerOperacion();
+                    break;
+                case 20:
+                    gestor.rehacerOperacion();
+                    break;
+                case 21:
+                    gestor.procesarArchivoCSV();
+                    break;
+                case 22:
+                    System.out.println("Saliendo del sistema...");
+                    break;
+                default:
+                    System.out.println("Opcion no valida.");
+                    break;
             }
         } while (opcion != 22);
+ 
+        sc.close();
     }
 }

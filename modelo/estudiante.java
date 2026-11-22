@@ -1,5 +1,5 @@
 
-package Proyecto_Programacion.modelo;
+package modelo;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -48,7 +48,10 @@ public class Estudiante extends Persona
             i++;
         }
 
-        existe ? System.out.println("") : historialMaterias.add(materia);
+           if (!existe)
+        {
+            historialMaterias.add(materia);
+        }
     }
 
     public void removerMateriaHistorial(String codigoMateria)
